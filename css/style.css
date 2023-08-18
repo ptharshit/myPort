@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
 
 
+
 *{
     margin: 0;
     padding: 0;
@@ -31,6 +32,11 @@ body{
     background: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
+}
+
+h1::selection, h2::selection, span::selection{
+    color: salmon;
+    background-color: darkmagenta;
 }
 
 .header{
@@ -122,6 +128,19 @@ section{
     font-weight: 700;
     margin-bottom: .3rem;
     color: var(--main-color);
+}
+.home-content h1::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--main-color);
+    transition: all ease 1s;
+}
+.home-content h1:hover::after{
+    width: 100%;
 }
 .home-content p{
     font-size: 1.9rem;
