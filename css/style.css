@@ -323,6 +323,7 @@ span{
 }
 .about-img:hover img{
     scale: 1.1;
+    cursor:grab;
 }
 .heading{
     font-size: 4.5rem;
